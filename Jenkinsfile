@@ -6,7 +6,7 @@ pipeline {
             steps {
         
                 git branch: 'main',
-                    url: 'https://github.com/aela-sujana/https://github.com/aela-sujana/external.git
+                    url: 'https://github.com/aela-sujana/https://github.com/aela-sujana/external.git'
             }
         }
 
