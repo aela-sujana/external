@@ -5,8 +5,8 @@ pipeline {
         stage('Checkout') {
             steps {
         
-                git branch: 'main',
-                    url: 'https://github.com/aela-sujana/https://github.com/aela-sujana/external.git'
+                git branch: 'master',
+                    url: 'https://github.com/aela-sujana/external.git'
             }
         }
 
