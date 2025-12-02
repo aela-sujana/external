@@ -4,43 +4,30 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-        
-                git branch: 'master',
+                git branch: 'main',
                     url: 'https://github.com/aela-sujana/external.git'
             }
         }
 
         stage('Build') {
             steps {
-                // Example build step
-                sh 'echo "Building project..."'
-                sh './gradlew build'   
+                bat 'echo Building project...'
+                bat 'gradlew build'
             }
         }
 
         stage('Test') {
             steps {
-                // Example test step
-                sh 'echo "Running tests..."'
-                sh './gradlew test'    
+                bat 'echo Running tests...'
+                bat 'gradlew test'
             }
         }
 
         stage('Deploy') {
             steps {
-                // Example deploy step
-                sh 'echo "Deploying application..."'
-                
+                bat 'echo Deploying application...'
+                // Add your Windows deploy commands here
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'Pipeline completed successfully!'
-        }
-        failure {
-            echo 'Pipeline failed!'
         }
     }
 }
